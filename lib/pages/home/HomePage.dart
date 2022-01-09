@@ -26,6 +26,80 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
+      body: Column(
+        children: [
+          Container(
+            padding: const EdgeInsets.all(5),
+            margin: const EdgeInsets.all(5),
+            width: double.infinity,
+            height: 100,
+            child: Card(
+              color: Colors.green.shade600,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Material(
+                child: InkWell(
+                  onTap: () {
+                    print('Tapped');
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      //
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Learn',
+                        style: TextStyle(
+                          color: Colors.grey.shade50,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                color: Colors.transparent,
+              ),
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(5),
+            margin: const EdgeInsets.all(5),
+            width: double.infinity,
+            height: 100,
+            child: Card(
+              color: Colors.deepOrange.shade400,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Material(
+                child: InkWell(
+                  onTap: () {
+                    print('Tapped');
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      //
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Knowledge Test',
+                        style: TextStyle(
+                          color: Colors.grey.shade50,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                color: Colors.transparent,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
