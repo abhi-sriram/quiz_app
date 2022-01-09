@@ -4,7 +4,10 @@ import 'package:quiz_app/backend/Authentication.dart';
 import 'package:quiz_app/pages/auth/LoginPage.dart';
 import 'package:quiz_app/pages/auth/RegisterPage.dart';
 import 'package:quiz_app/pages/home/HomePage.dart';
+import 'package:quiz_app/pages/home/ISRO/CentersPage.dart';
+import 'package:quiz_app/pages/home/ISRO/CustomerSatellitesPage.dart';
 import 'package:quiz_app/pages/home/ISRO/IsroHomepage.dart';
+import 'package:quiz_app/pages/home/ISRO/LaunchersPage.dart';
 import 'package:quiz_app/pages/home/ISRO/SpacecraftsPage.dart';
 import 'package:quiz_app/pages/home/ProfilePage.dart';
 import 'package:quiz_app/pages/home/learn/IndividualTopicPage.dart';
@@ -67,6 +70,9 @@ class MyApp extends StatelessWidget {
         IndividualTopicPage.routeName: (_) => const IndividualTopicPage(),
         IsroHomepage.routeName: (_) => const IsroHomepage(),
         SpacecraftsPage.routeName: (_) => const SpacecraftsPage(),
+        LaunchersPage.routeName: (_) => const LaunchersPage(),
+        CustomerSatellitesPage.routeName: (_) => const CustomerSatellitesPage(),
+        CentersPage.routeName: (_) => const CentersPage(),
       },
       home: FutureBuilder(
         future: Authentication().isUserActive(),

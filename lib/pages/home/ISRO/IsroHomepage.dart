@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/pages/home/ISRO/CentersPage.dart';
+import 'package:quiz_app/pages/home/ISRO/CustomerSatellitesPage.dart';
+import 'package:quiz_app/pages/home/ISRO/LaunchersPage.dart';
 import 'package:quiz_app/pages/home/ISRO/SpacecraftsPage.dart';
 
 class IsroHomepage extends StatefulWidget {
@@ -14,6 +17,15 @@ class _IsroHomepageState extends State<IsroHomepage> {
     switch (i) {
       case 0:
         Navigator.of(context).pushNamed(SpacecraftsPage.routeName);
+        break;
+      case 1:
+        Navigator.of(context).pushNamed(LaunchersPage.routeName);
+        break;
+      case 2:
+        Navigator.of(context).pushNamed(CustomerSatellitesPage.routeName);
+        break;
+      case 3:
+        Navigator.of(context).pushNamed(CentersPage.routeName);
         break;
       default:
     }

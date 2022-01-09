@@ -1,13 +1,14 @@
+
 import 'package:http/http.dart' as http;
 import "dart:convert";
 
-class Spacecrafts {
+class Centers {
 
 
 
   Future<Map<String, dynamic>> fetchData() async {
     var headers = {'Content-Type': 'application/json'};
-     var request = http.Request('GET', Uri.parse('https://isro.vercel.app/api/spacecrafts'));
+     var request = http.Request('GET', Uri.parse('https://isro.vercel.app/api/centres'));
 
     request.headers.addAll(headers);
 
