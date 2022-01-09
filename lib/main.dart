@@ -4,7 +4,12 @@ import 'package:quiz_app/backend/Authentication.dart';
 import 'package:quiz_app/pages/auth/LoginPage.dart';
 import 'package:quiz_app/pages/auth/RegisterPage.dart';
 import 'package:quiz_app/pages/home/HomePage.dart';
+import 'package:quiz_app/pages/home/ISRO/IsroHomepage.dart';
 import 'package:quiz_app/pages/home/ProfilePage.dart';
+import 'package:quiz_app/pages/home/learn/IndividualTopicPage.dart';
+
+import 'pages/home/learn/SubjectsPage.dart';
+import 'pages/home/learn/TopicsPage.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -56,17 +61,21 @@ class MyApp extends StatelessWidget {
         LoginPage.routeName: (_) => const LoginPage(),
         HomePage.routeName: (_) => const HomePage(),
         ProfilePage.routeName: (_) => const ProfilePage(),
+        SubjectsPage.routeName: (_) => const SubjectsPage(),
+        TopicsPage.routeName: (_) => const TopicsPage(),
+        IndividualTopicPage.routeName: (_) => const IndividualTopicPage(),
+        IsroHomepage.routeName: (_) => const IsroHomepage(),
       },
       home: FutureBuilder(
-          future: Authentication().isUserActive(),
-          builder: (ctx, isLoggedin) {
-            print(isLoggedin.data);
-            if (isLoggedin.hasData && isLoggedin.data == true) {
-              return const HomePage();
-            } else {
-              return const LoginPage();
-            }
-          }),
+        future: Authentication().isUserActive(),
+        builder: (ctx, isLoggedin) {
+          if (isLoggedin.hasData && isLoggedin.data == true) {
+            return const HomePage();
+          } else {
+            return const LoginPage();
+          }
+        },
+      ),
     );
   }
 }
