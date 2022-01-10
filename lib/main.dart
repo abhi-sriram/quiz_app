@@ -10,6 +10,10 @@ import 'package:quiz_app/pages/home/ISRO/IsroHomepage.dart';
 import 'package:quiz_app/pages/home/ISRO/LaunchersPage.dart';
 import 'package:quiz_app/pages/home/ISRO/SpacecraftsPage.dart';
 import 'package:quiz_app/pages/home/ProfilePage.dart';
+import 'package:quiz_app/pages/home/Quiz/AttemptQuizPage.dart';
+import 'package:quiz_app/pages/home/Quiz/FinalAnswersRevealPage.dart';
+import 'package:quiz_app/pages/home/Quiz/QuizHomePage.dart';
+import 'package:quiz_app/pages/home/Quiz/QuizLevelPage.dart';
 import 'package:quiz_app/pages/home/learn/IndividualTopicPage.dart';
 
 import 'pages/home/learn/SubjectsPage.dart';
@@ -73,6 +77,10 @@ class MyApp extends StatelessWidget {
         LaunchersPage.routeName: (_) => const LaunchersPage(),
         CustomerSatellitesPage.routeName: (_) => const CustomerSatellitesPage(),
         CentersPage.routeName: (_) => const CentersPage(),
+        QuizHomePage.routeName: (_) => const QuizHomePage(),
+        QuizLevelPage.routeName: (_) => const QuizLevelPage(),
+        AttemptQuizPage.routeName: (_) => const AttemptQuizPage(),
+        FinalAnswersRevelaPage.routeName: (_) => const FinalAnswersRevelaPage(),
       },
       home: FutureBuilder(
         future: Authentication().isUserActive(),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/pages/home/ISRO/IsroHomepage.dart';
 import 'package:quiz_app/pages/home/ProfilePage.dart';
+import 'package:quiz_app/pages/home/Quiz/QuizHomePage.dart';
 
 import 'learn/SubjectsPage.dart';
 
@@ -85,7 +86,7 @@ class _HomePageState extends State<HomePage> {
               child: Material(
                 child: InkWell(
                   onTap: () {
-                    print('Tapped');
+                    Navigator.of(context).pushNamed(QuizHomePage.routeName);
                   },
                   child: Container(
                     decoration: BoxDecoration(
@@ -97,7 +98,7 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Knowledge Test',
+                          'Test',
                           style: TextStyle(
                             color: Colors.grey.shade50,
                             fontSize: 18,
@@ -138,7 +139,7 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'ISRO Knowledge',
+                          'ISRO',
                           style: TextStyle(
                             color: Colors.grey.shade50,
                             fontSize: 18,
